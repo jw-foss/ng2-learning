@@ -1,0 +1,22 @@
+<h1> {{title}} </h1>
+<div>
+	<div class="dm">
+	<div class="show_dm">
+		<div *ngFor="let danmu of danmus" class="danmu_show">
+			<div [style.color]="danmu.color">
+			{{danmu.text}}
+			</div>
+		</div>
+		<!-- danmu goes here -->
+	</div>		
+	</div>
+	<div class="btn-group">
+		<input #danmu type="text" name="text" class="input-dm" placeholder="Say Something?"><br>
+		<button class="shoot" (click)="addDanmu(danmu)" >Shoot Danmu</button>
+		<button class="clear" (click)="clearScreen()">Clear Screen</button>
+		<br>
+		<input type="radio" [(ngModel)]="color" name="color" value="red">red
+		<input type="radio" [(ngModel)]="color"  name="color" value="blue">blue
+		<input type="radio" [(ngModel)]="color"  value="yellow" name="color" >yellow
+	</div>
+</div>

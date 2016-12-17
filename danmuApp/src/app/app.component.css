@@ -1,0 +1,100 @@
+* {
+-webkit-box-sizing: borderbox;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+*:after {
+-webkit-box-sizing: borderbox;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+*: before{
+-webkit-box-sizing: borderbox;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+html, body {
+padding: 10px;
+font-family: Consolas;
+font-size: 12px;
+width: 100%;
+}
+h1 {
+	text-align: center;
+}
+.dm {
+position: relative;
+overflow: hidden;
+width: 90%;
+margin: 0 auto;
+height: 60vh;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.input-dm {
+width: 100%;
+padding: 5px;
+border-radius: 5px;
+}
+.btn-group {
+	text-align: center;
+	width: 30%;
+	margin: 10px auto;
+}
+.btn-group button{
+	cursor: pointer;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+
+.btn-group .shoot {
+	background-color: powderblue;
+}
+.btn-group .clear {
+	background-color: red;
+}
+
+.danmu_show{ 
+	position: relative;
+	left: 100%;
+	-webkit-animation: danmu 3s linear ;
+	-moz-animation: danmu 3s linear ;
+	-o-animation: danmu 3s linear ;
+	animation: danmu 3s linear ;
+ }
+ @-webkit-keyframes danmu {
+	from {
+	left: 0%;
+ }
+   to {
+   	left: 100%;
+   }
+ }
+ @-moz-keyframes danmu {
+ 	from {
+	left: 0;
+ }
+   to {
+   	margin-left: 100%;
+   }
+ }
+ @-o-keyframes danmu {
+ 	from {
+	margin-left: -20%;
+ }
+   to {
+   	margin-left: 120%;
+   }
+ }
+ @keyframes danmu {
+	from {
+	left: 0%;
+ }
+   to {
+  
+   	left: 100%;
+   }
+}
