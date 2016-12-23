@@ -1,0 +1,25 @@
+.header{
+    margin-top: 20px;
+    background-color: #ccc;
+    alpha: .3;
+    padding: 5px 0;
+    border-top: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+}
+.header a {
+    cursor: pointer;
+}
+
+.put_top {
+    padding-right: 1px;
+}
+.pagination {
+  text-align: center;
+}
+.pagination li{
+    cursor: pointer;
+}
+
+.pagination a {
+    color: #000;
+}

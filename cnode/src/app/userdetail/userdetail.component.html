@@ -1,0 +1,54 @@
+<div class="content">
+  <div class="panel">
+    <div class="bread tag">
+      <span class="location">主页</span>
+      /
+    </div>
+    <div class="user_infos cell">
+      <div class="user_avatar">
+        <img [src]="user.avatar_url" alt="">
+        <span>{{user.loginname}}</span>
+      </div>
+      <div class="score">{{user.score}} 积分</div>
+      <div>github: <a [href]="'https://www.github.com/' + user.githubUsername">@{{user.githubUsername}}</a></div>
+      <div class="register_time">注册时间 <span [innerHTML]="getDate(user.create_at)"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="panel">
+    <div class="tag">
+      最近创建的话题
+    </div>
+    <div *ngFor="let topic of user.recent_topics">
+      <div class="cell">
+        <a [routerLink]="['/user', topic.author && topic.author.loginname]">
+          <img [src]="topic.author && topic.author.avatar_url" alt="" width="30px" height="30px">
+        </a>
+        <a [routerLink]="['/topic', topic.id]">{{topic.title}}</a>
+        <span class="pull-right" [innerHTML]="getDate(topic.last_reply_at)">
+            </span>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="panle">
+    <div class="tag">
+      最近参与的话题
+    </div>
+    <div class="cell" *ngFor="let reply of user.recent_replies">
+      <a [routerLink]="['/user', reply.author && reply.author.loginname]">
+        <img [src]="reply.author && reply.author.avatar_url" alt="" width="30px" height="30px">
+      </a>
+      <a [routerLink]="['/topic', reply.id]">{{reply.title}}</a>
+      <span class="pull-right" [innerHTML]="getDate(reply.last_reply_at)"></span>
+      <hr>
+    </div>
+  </div>
+
+</div>
+
+

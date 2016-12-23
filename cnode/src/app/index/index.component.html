@@ -1,0 +1,51 @@
+<div class="header">
+  <a  [routerLink]="['']" (click)="goTab('all')" [ngClass]="{'topic-tab': true, 'current-tab': tab==='all'}">all</a>
+  <a  [routerLink]="['']" routerLinkActive="current-tab" [queryParams]="{tag: 'ask'}" (click)="goTab('ask')" class="topic-tab">ask</a>
+  <a  [routerLink]="['']" routerLinkActive="current-tab" [queryParams]="{tag: 'share'}" (click)="goTab('share')" class="topic-tab">share</a>
+  <a  [routerLink]="['']" routerLinkActive="current-tab" [queryParams]="{tag: 'job'}" (click)="goTab('job')" class="topic-tab">job</a>
+  <a  [routerLink]="['']" routerLinkActive="current-tab" [queryParams]="{tag: 'good'}" (click)="goTab('good')" class="topic-tab">good</a>
+</div>
+<div class="panel">
+  <div *ngFor="let topic of data">
+    <div class="cell">
+      <a [routerLink]="['/user', topic.author.loginname]" class="user_avatar pull-left">
+        <img [src]="topic.author.avatar_url" alt="avatar" width="30px" height="30px">
+      </a>
+      <span class="reply_count pull-left">
+        <span class="count_of_replies">
+          {{topic.reply_count}}
+        </span>
+      <span class="count_seperator">/</span>
+      <span class="count_of_visits">
+        {{topic.visit_count}}
+       </span>
+      </span>
+      <a href="" class="last_time pull-right">
+        <span [innerHTML]="getDate(topic.last_reply_at)"></span>
+      </a>
+      <div class="topic_title_wrapper">
+        <span [class]="topic.top||topic.good ? 'put_top' : 'badge'">
+          {{ topic.top ? 'top' : topic.good ? 'good' : topic.tab }}
+          </span>&nbsp;
+        <a [routerLink]="['/topic', topic.id]" class="topic_title">{{topic.title}}
+        </a>
+      </div>
+      <hr>
+    </div>
+  </div>
+  <div class="pagination">
+    <ul>
+      <li *ngIf="currentPage !== 1" (click)="goBack()">
+        <a > &lt;</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" >
+          {{currentPage}}
+        </a>
+      </li>
+      <li (click)="goNext()">
+        <a > &gt;</a>
+      </li>
+    </ul>
+  </div>
+</div>

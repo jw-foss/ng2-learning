@@ -1,0 +1,15 @@
+.content {
+  background: white;
+  border-radius: 4px;
+  margin: 0 5px;
+  margin-top: 20px;
+}
+
+.tag {
+  padding: 4px;
+  border-bottom: 1px solid #ccc;
+}
+
+.panel hr {
+  margin: 5px 0;
+}
