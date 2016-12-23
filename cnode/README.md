@@ -1,3 +1,31 @@
+# Cnode project structure
+.
+|____app.component.ts
+|____app.module.ts
+|____head
+| |____head.component.css
+| |____head.component.html
+| |____head.component.ts
+|____index
+| |____index.component.css
+| |____index.component.des.ts
+| |____index.component.html
+| |____index.component.ts
+|____index.ts
+|____routs.module.ts
+|____services
+| |____cnode.service.ts
+|____topiccontent
+| |____topiccontent.component.css
+| |____topiccontent.component.html
+| |____topiccontent.component.spec.ts
+| |____topiccontent.component.ts
+|____userdetail
+| |____userdetail.component.css
+| |____userdetail.component.html
+| |____userdetail.component.spec.ts
+| |____userdetail.component.ts
+
 # Cnode
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
