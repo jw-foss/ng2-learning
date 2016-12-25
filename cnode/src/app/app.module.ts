@@ -1,3 +1,4 @@
+import { CreateTimePipe } from './pipe/create.pipe';
 import { routes } from './routs.module';
 import { HeadComponent } from './head/head.component';
 import { CnodeService } from './services/cnode.service';
@@ -9,14 +10,16 @@ import { HttpModule } from '@angular/http';
 import { IndexComponent } from './index/index.component';
 import { AppComponent } from './app.component';
 import { UserdetailComponent } from './userdetail/userdetail.component';
-import { TopiccontentComponent } from './topiccontent/topiccontent.component'
+import { TopiccontentComponent } from './topiccontent/topiccontent.component';
+
 @NgModule({
   declarations: [
     HeadComponent,
     IndexComponent,
     AppComponent,
     UserdetailComponent,
-    TopiccontentComponent
+    TopiccontentComponent,
+    CreateTimePipe
   ],
   imports: [
     BrowserModule,

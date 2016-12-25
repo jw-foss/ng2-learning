@@ -33,12 +33,11 @@
             <img [src]="reply.author && reply.author.avatar_url" alt="" width="30px" height="30px">
           </a>
           <span>{{reply.author && reply.author.loginname}}</span>
-          <a> <span>{{i+1}}楼</span> &middot; <span [innerHTML]="getDate(reply.create_at)"></span></a>
+          <a> <span>{{i+1}}楼</span> &middot; <span>{{reply.create_at | createTime}}</span></a>
           <div class="reply_content" [innerHTML]="reply.content"></div>
           <span class="ups"> 赞&nbsp; {{reply.ups.length}}</span>
         </div>
       </div>
     </div>
   </div>
-
 </div>
